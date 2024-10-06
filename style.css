@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Rubik", sans-serif !important;
+  font-optical-sizing: auto;
+
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4379F2;
+    padding: 10px 20px;
+  }
+  
+  .logo a {
+    color: rgb(231, 245, 239);
+    text-decoration: none;
+    padding-left: 40px;
+    font-size: 30px;
+    font-weight: bold;
+  font-style: italic;
+  }
+  
+  .nav-items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    
+  }
+  
+  .nav-items li {
+    position: relative;
+  }
+  
+  .nav-items li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    
+  }
+  
+  .nav-items li a:hover {
+    background-color: #555;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333 ;
+    display: none;
+    list-style: none;
+ 
+  }
+  
+  .dropdown-menu li a {
+    padding: 10px;
+    white-space: nowrap;
+    background-color: #4379F2;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-items {
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      display: none;
+    }
+  
+    .nav-items li {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-items.show {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+
+
+/* Active link styling */
+.nav-items li a.active {
+    background-color: #608be7; /* Set a different background color for the active link */
+    
+    
+  }
+  
+  /* Hover effect for all links */
+  .nav-items li a:hover {
+    background-color: #555;
+    
+  }
+  
+  /* Style for tagline section */
+.tagline-section {
+  text-align: center;
+  padding: 40px 20px; /* Adds spacing around the tagline */
+  background-color: #f3f3f346; /* Optional: background color for contrast */
+}
+
+.tagline-section h1 {
+  font-size: 2.5em; /* Adjust font size for tagline */
+  color: #3c4642; /* Change the text color */
+  font-weight: 600; /* Makes the text slightly bold */
+  margin: 0;
+  letter-spacing: 1px; /* Adds some spacing between letters */
+  font-family: "Satisfy", cursive;
+}
+
+@media (max-width: 768px) {
+  .tagline-section h1 {
+      font-size: 1.8em; /* Adjust font size for smaller screens */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --purple: hsl(240, 80%, 89%);
+  --pink: hsl(0, 59%, 94%);
+  --light-bg: hsl(204, 37%, 92%);
+  --light-gray-bg: hsl(0, 0%, 94%);
+  --white: hsl(0, 0%, 100%);
+  --dark: hsl(0, 0%, 7%);
+  --text-gray: hsl(0, 0%, 30%);
+}
+
+body {
+  background: var(--light-bg);
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--dark);
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--text-gray);
+}
+
+.description {
+  white-space: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  position: relative;
+  padding: 24px;
+  background: #c5dabc1f;
+  border-radius: 5px;
+}
+
+.box-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.box-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: 50% 20%;
+  
+}
+
+.title-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-title {
+  border-left: 3px solid var(--purple);
+  padding-left: 12px;
+}
+
+
+
+.button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: auto;
+  padding: 16px;
+  color: #000;
+  background: transparent;
+  box-shadow: 0px 0px 0px 1px black inset;
+  transition: background 0.4s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--purple);
+}
+
+.fill-one {
+  background: var(--light-bg);
+}
+
+.fill-two {
+  background: var(--pink);
+}
+
+/* RESPONSIVE QUERIES */
+
+@media (min-width: 320px) {
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 460px) {
+  .title-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 640px) {
+  .box {
+    flex-basis: calc(50% - 12px);
+  }
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 840px) {
+  .title-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box {
+    flex-basis: calc(33.3% - 16px);
+  }
+  .title-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .user-follow-info {
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .box {
+    flex-basis: calc(25% - 18px);
+  }
+}
+
+footer {
+  background-color: #4379F2; 
+    color: #ffffff; /* White text color */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+    width: 100%;
+    position: relative; /* This avoids it from overlapping content */
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+.aboutus{
+  font-size: 2.5em; /* Adjust font size for tagline */
+  color: #3c4642; /* Change the text color */
+  font-weight: 600; /* Makes the text slightly bold */
+  margin: 0;
+  letter-spacing: 1px; /* Adds some spacing between letters */
+  font-family: "Satisfy", cursive;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.aboutp{
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+  padding-right: 100px;
+  gap: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  position: relative;
+  padding: 24px;
+  background: #c5dabc1f;
+  border-radius: 5px;
+
+}
+
+/* Client Logos Section */
+.client-logos {
+  padding: 20px 0;
+  background-color: #f9f9f9; /* Optional: Background color */
+}
+
+/* Logos container with overflow hidden */
+.logos-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Logos slide for animation */
+.logos-slide {
+  display: flex;
+  width: calc(100px * 18); /* Adjust based on total logos */
+  animation: scroll 30s linear infinite;
+}
+
+.logos-slide img {
+  width: 100px;
+  height: 100px;
+  margin: 0 15px; /* Space between logos */
+  filter: grayscale(100%); /* Greyscale by default */
+  transition: filter 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect to remove greyscale */
+.logos-slide img:hover {
+  filter: grayscale(0%); /* Removes greyscale on hover */
+}
+
+/* Keyframes for continuous scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-products {
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for visibility */
+  margin-top: 20px;
+  position: relative; /* Allows absolute positioning of the marquee effect */
+  overflow: hidden; /* Hides overflow from the marquee effect */
+}
+
+.hero-product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  animation: marquee 20s linear infinite; /* Marquee effect */
+}
+
+.hero-product-image {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.hero-product-info {
+  flex: 1;
+}
+
+.button {
+  padding: 5px 10px; /* General button size */
+}
+
+.small-button {
+  padding: 3px 6px; /* Smaller padding for the button */
+  font-size: 12px; /* Smaller font size */
+  width: auto; /* Adjust width to fit text */
+  display: inline-block; /* Allows for width adjustment */
+  text-align: center; /* Center text */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 1px #ff00ff, 0 0 1px #6e2e6e, 0 0 1px #ff00ff;
+      color: #ff00ff; /* Start color */
+  }
+  50% {
+      text-shadow: 0 0 1px #00ffff, 0 0 1px #00ffff, 0 0 1px #00ffff;
+      color: #00ffff; /* Mid color */
+  }
+  100% {
+      text-shadow: 0 0 1px #ff00ff, 0 0 1px #ff00ff, 0 0 1px #ff00ff;
+      color: #ff00ff; /* End color */
+  }
+}
+
+.hero-products h2 {
+  animation: glow 10s infinite; /* Apply the glowing animation */
+  font-size: 2em; /* Adjust font size as needed */
+  text-align: center; /* Center the text */
+}

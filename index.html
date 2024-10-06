@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>HM InfoTech</title>
+        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+        
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html"> <img src="./LOGO.png" height="40px"> INFOTECH</a>
+        </div>
+        <ul class="nav-items">
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="./webdesign.html">Web designing</a></li>
+              <li><a href="#">App development</a></li>
+              <li><a href="#">Graphic designing</a></li>
+              <li><a href="#">3D designing</a></li>
+              <li><a href="#">Digital marketing</a></li>
+              <li><a href="#">Film & Video production</a></li>
+              <li><a href="./trade tech/index.html">Stock market Algorithms</a></li>
+              <li><a href="#">Social media services</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="./About.html">About</a></li>
+          <li><a href="./Contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          &#9776;
+        </div>
+      </nav>
+      <script>
+        const hamburger = document.getElementById('hamburger');
+        const navItems = document.querySelector('.nav-items');
+        
+        hamburger.addEventListener('click', () => {
+          navItems.classList.toggle('show');
+        });
+      </script>
+
+<section class="tagline-section">
+  <h1>Transforming Ideas into Digital Reality <a href="#"><img src="https://www.animatedimages.org/data/media/600/animated-rocket-and-space-shuttle-image-0002.gif" border="0" alt="animated-rocket-and-space-shuttle-image-0002" /></a></h1>
+</section>
+<!-- Hero Products Section -->
+<section class="hero-products">
+  <h2>Hero Products</h2>
+  <div class="hero-product">
+      <img src="./nifty.png" alt="Nifty Algorithm" class="hero-product-image">
+      <div class="hero-product-info">
+          <h3>Nifty Algorithm</h3>
+          <a href="./trade tech/Niftyintradayalgo.html" class="button small-button">Get Now</a>
+      </div>
+  </div>
+</section>
+
+
+<div class="wrap">
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="./web.jpg" alt="web designing">
+      <div class="title-flex">
+        <h3 class="box-title">Web designing</h3>
+        
+      </div>
+      <p class="description">At HM InfoTech, we craft beautiful, responsive websites tailored to your brand. Our designs blend creativity with functionality, ensuring a seamless user experience across all devices. Whether it's a new site or a redesign, we bring your digital vision to life.</p>
+    </div>
+    <a href="./webdesign.html" class="button">Get Started</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="./appd.jpg" alt="App development">
+      <div class="title-flex">
+        <h3 class="box-title">App development</h3>
+        
+      </div>
+      <p class="description">At HM InfoTech, we build intuitive and robust mobile apps that enhance user experience and drive engagement. From concept to launch, our custom app development solutions are tailored to meet your business needs and deliver seamless performance on all devices.</p>
+    </div>
+    <a href="#" class="button">Get Started</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="./gd.jpg" alt="Graphic designing">
+      <div class="title-flex">
+        <h3 class="box-title">Graphic designing</h3>
+       
+      </div>
+      <p class="description">At HM InfoTech, we create visually striking graphics that capture your brand's essence. From logos to marketing materials, our designs are crafted to make a lasting impression and effectively communicate your message.</p>
+    </div>
+    <a href="#" class="button">Get Started</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="./3d.jpg" alt="3D designing">
+      <div class="title-flex">
+        <h3 class="box-title">3D designing</h3>
+        
+      </div>
+      <p class="description">At HM InfoTech, we bring your ideas to life with cutting-edge 3D design. Whether it's realistic interior design or detailed 3D models, our services create immersive visuals that help you visualize and perfect your projects before they come to life.</p>
+    </div>
+    <a href="#" class="button">Get Started</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="./dm.jpg" alt="Digital marketing">
+      <div class="title-flex">
+        <h3 class="box-title">Digital marketing</h3>
+        
+      </div>
+      <p class="description">At HM InfoTech, we boost your online presence with targeted SEO, social media, and ad strategies. Our data-driven approach helps you reach the right audience, increase engagement, and drive conversions.</p>
+    </div>
+    <a href="#" class="button">Get Started</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="./film.jpg" alt="Film & Video production">
+      <div class="title-flex">
+        <h3 class="box-title">Film & Video production</h3>
+        
+      </div>
+      <p class="description">At HM InfoTech, we craft compelling films and videos that captivate and engage. From concept development to final editing, our production services deliver high-quality visual content that tells your story and enhances your brand.</p>
+    </div>
+    <a href="#" class="button">Get Started</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="./stock.jpg" alt="Stock market Algorithms">
+      <div class="title-flex">
+        <h3 class="box-title">Stock market Algorithms</h3>
+        
+      </div>
+      <p class="description">At HM InfoTech, we provide advanced stock market algorithms and custom solutions tailored to your trading strategies. Optimize your trading with our precise and efficient algorithms designed for your investment goals.</p>
+    </div>
+    <a href="./trade tech/index.html" class="button">Get Started</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="./social.jpg" alt="Social media services">
+      <div class="title-flex">
+        <h3 class="box-title">Social media services</h3>
+        
+      </div>
+      <p class="description">At HM InfoTech, we boost your social media presence with targeted strategies to increase Instagram followers, YouTube subscribers, Telegram members, and more. Our services enhance your online visibility and engagement, driving growth across all platforms.</p>
+    </div>
+    <a href="#" class="button">Get Started</a>
+  </div>
+</div>
+
+ 
+     <!-- Copyright Footer -->
+<footer class="footer">
+  <p><font color ="#ffffff">  &copy; 2024 HM InfoTech. All rights reserved.</font></p>
+</footer>
+      
+    </body>
+    
+</html>

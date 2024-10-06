@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #00A1E0;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #008BB3;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .confirmation {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Payment Page</h2>
+    <p>Scan the QR code to pay</p>
+    <img src="./qr.jpg" alt="UPI QR Code" style="width: 100%; height: auto;">
+    <p>After payment, please enter your details for verification:</p>
+    
+    <input type="text" id="userName" placeholder="Your Name" required>
+    <input type="tel" id="userMobile" placeholder="Your Mobile No" required>
+    <input type="email" id="userEmail" placeholder="Your Email" required>
+    <input type="text" id="transactionId" placeholder="Transaction ID" required>
+    
+    <button class="btn" onclick="submitPayment()">Submit as Paid</button>
+    
+    <div id="confirmationMessage" class="confirmation" style="display: none;"></div>
+</div>
+
+<script>
+    function submitPayment() {
+        var name = document.getElementById('userName').value;
+        var mobile = document.getElementById('userMobile').value;
+        var email = document.getElementById('userEmail').value;
+        var transactionId = document.getElementById('transactionId').value;
+        var confirmationMessage = document.getElementById('confirmationMessage');
+
+        if (name && mobile && email && transactionId) {
+            // Here you can use fetch or XMLHttpRequest to send the data to your server
+            
+            // Show confirmation message
+            confirmationMessage.style.display = 'block';
+            confirmationMessage.innerHTML = 'Payment submitted successfully! We will notify you at ' + email + ' with Transaction ID: ' + transactionId;
+            
+            // Clear the input fields after submission
+            document.getElementById('userName').value = '';
+            document.getElementById('userMobile').value = '';
+            document.getElementById('userEmail').value = '';
+            document.getElementById('transactionId').value = '';
+        } else {
+            alert('Please fill in all fields.');
+        }
+    }
+</script>
+
+</body>
+</html>
