@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Web Designing Service - HM InfoTech</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <style>
+       
+        
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .submit-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .btn-custom {
+            width: 48%;
+        }
+        .success-message {
+            display: none; /* Initially hidden */
+            text-align: center;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="./index.html"><img src="./LOGO.png" height="40px"> INFOTECH</a>
+    </div>
+    <ul class="nav-items">
+        <li><a href="./index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Services</a>
+            <ul class="dropdown-menu">
+                <li><a href="./web-designing.html" class="active">Web designing</a></li>
+                <li><a href="./app-development.html">App development</a></li>
+                <li><a href="./graphic-designing.html">Graphic designing</a></li>
+                <li><a href="./3d-designing.html">3D designing</a></li>
+                <li><a href="./digital-marketing.html">Digital marketing</a></li>
+                <li><a href="./film-video-production.html">Film & Video production</a></li>
+                <li><a href="./stock-market-algorithms.html">Stock market Algorithms</a></li>
+                <li><a href="./social-media-services.html">Social media services</a></li>
+            </ul>
+        </li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./Contact.html">Contact</a></li>
+    </ul>
+</nav>
+<div class="form-container">
+    <h2 class="form-header">Service Inquiry</h2>
+    <form id="serviceInquiryForm" onsubmit="return handleServiceSubmit(event)">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile No:</label>
+            <input type="tel" class="form-control" id="mobile" name="mobile" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select class="form-control" id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" class="form-control" id="country" name="country" required>
+        </div>
+        <div class="form-group">
+            <label for="serviceType">Select Service:</label>
+            <select class="form-control" id="serviceType" name="serviceType" required>
+                <option value="">Select a Service</option>
+                <option value="web-design">Web Design</option>
+                <option value="app-development">App Development</option>
+                <option value="graphic-designing">Graphic Designing</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="3d-designing">3D Designing</option>
+                <option value="film-video-production">Film & Video Production</option>
+                <option value="stock-market-related">Stock Market Related</option>
+                <option value="social-media-services">Social Media Services</option>
+                <!-- Add more services as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="serviceDetails">Service Requirements:</label>
+            <textarea class="form-control" id="serviceDetails" name="serviceDetails" rows="3" placeholder="Provide details about your service requirements" required></textarea>
+        </div>
+        <div class="submit-buttons">
+            <button type="submit" class="btn btn-primary btn-custom">Submit</button>
+            <button type="button" class="btn btn-secondary btn-custom" onclick="window.location.href='contact.html'">Contact Now</button>
+        </div>
+    </form>
+    <div class="success-message" id="successMessage">Submitted successfully! We will contact you soon.</div>
+</div>
+
+
+
+<script>
+    function handleServiceSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Display the success message
+        document.getElementById('successMessage').style.display = 'block';
+
+        // Optionally, clear the form fields
+        document.getElementById('serviceInquiryForm').reset();
+
+        // You can also add code to send the form data to a server if needed.
+    }
+</script>
+
+</body>
+</html>
